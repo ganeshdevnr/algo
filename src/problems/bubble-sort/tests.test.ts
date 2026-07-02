@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import bubbleSort from "../problems/bubble-sort.js";
+import bubbleSort from "./solution.js";
 
 describe("bubble-sort", () => {
   it("sorts an unsorted array", () => {

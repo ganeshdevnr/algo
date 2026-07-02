@@ -5,11 +5,12 @@ TypeScript + Node.js practice environment for algorithm problems. Solution files
 ## Structure
 
 ```text
-src/problems/<problem-name>.ts
-src/tests/<problem-name>.test.ts
+src/problems/<problem-name>/problem.md
+src/problems/<problem-name>/solution.ts
+src/problems/<problem-name>/tests.test.ts
 ```
 
-Each problem file exports a default function. Starter files intentionally throw `"Not implemented"`.
+Each problem folder contains the problem description, your solution file, and its tests. Starter solution files intentionally throw `"Not implemented"`.
 
 ## Run Tests
 
@@ -25,7 +26,7 @@ Run one problem test by name:
 npm run test:one two-crystal-balls
 ```
 
-The problem name must match the test filename without `.test.ts`.
+The problem name must match the folder name under `src/problems/`.
 
 ## Formatting
 
@@ -45,9 +46,10 @@ npm run format:check
 
 ## Add A New Problem
 
-1. Create `src/problems/<problem-name>.ts`.
-2. Export a default function with the intended signature.
-3. Keep the initial body as a stub:
+1. Create `src/problems/<problem-name>/`.
+2. Add `problem.md` with the description, examples, and constraints.
+3. Add `solution.ts` and export a default function with the intended signature.
+4. Keep the initial solution body as a stub:
 
 ```ts
 export default function myProblem(input: number[]): number {
@@ -55,10 +57,11 @@ export default function myProblem(input: number[]): number {
 }
 ```
 
-4. Create `src/tests/<problem-name>.test.ts`.
-5. Import the default function from `../problems/<problem-name>.js`.
-6. Add tests for normal cases, edge cases, boundaries, and large inputs.
-7. Run `npm run test:one <problem-name>`.
+5. Create `tests.test.ts` in the same problem folder.
+6. Import the default function from `./solution.js`.
+7. Add tests for normal cases, edge cases, boundaries, and large inputs.
+8. Add a time-complexity guard when the problem has a meaningful expected complexity.
+9. Run `npm run test:one <problem-name>`.
 
 ## Rule
 

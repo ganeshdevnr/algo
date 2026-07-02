@@ -7,7 +7,7 @@ if (!problemName) {
   process.exit(1);
 }
 
-const result = spawnSync("vitest", ["run", `src/tests/${problemName}.test.ts`], {
+const result = spawnSync("vitest", ["run", `src/problems/${problemName}/tests.test.ts`], {
   stdio: "inherit",
   shell: true,
 });

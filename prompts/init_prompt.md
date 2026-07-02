@@ -2,8 +2,9 @@ Set up a TypeScript + Node.js algorithm practice environment with Vitest:
 
 1. Init a Node project with TypeScript and Vitest configured (ts strict mode).
 2. Folder structure:
-   - src/problems/<problem-name>.ts → my solution files (export default function)
-   - src/tests/<problem-name>.test.ts → unit tests for each problem
+   - src/problems/<problem-name>/problem.md → description, examples, and constraints
+   - src/problems/<problem-name>/solution.ts → my solution file (export default function)
+   - src/problems/<problem-name>/tests.test.ts → unit tests for the problem
 3. Each problem file starts as a stub (correct signature, throws "Not implemented").
 4. You write comprehensive unit tests per problem: normal cases, edge cases (empty input, single element, boundaries), and large inputs.
 5. Add npm scripts:

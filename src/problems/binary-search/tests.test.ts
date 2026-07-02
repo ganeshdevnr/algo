@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import binarySearch from "../problems/binary-search.js";
+import binarySearch from "./solution.js";
 
 describe("binary-search", () => {
   it("finds a value in the middle of a sorted array", () => {

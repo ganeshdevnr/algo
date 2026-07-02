@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import linearSearch from "../problems/linear-search.js";
+import linearSearch from "./solution.js";
 
 describe("linear-search", () => {
   it("finds a value in the middle of the array", () => {

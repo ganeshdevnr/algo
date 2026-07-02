@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import twoCrystalBalls from "../problems/two-crystal-balls.js";
+import twoCrystalBalls from "./solution.js";
 
 describe("two-crystal-balls", () => {
   it("finds the first breaking floor in the middle", () => {
