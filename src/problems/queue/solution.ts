@@ -38,7 +38,7 @@ export default class Queue<T> {
     this.head = head.next;
 
     // setting next to undefined, so it can be garbage collected.
-    head.next = undefined;
+    // head.next = undefined;
 
     // if we dequeue the last element, there is no element in the queue so, clear the head as well
     if (this.length === 0) {
