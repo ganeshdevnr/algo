@@ -49,5 +49,8 @@ export default function solveMaze(maze: string[][], start: Point): boolean {
   let path: Point[] = [];
   let seen: Set<string> = new Set();
 
-  return walk(maze, start, seen, path);
+  const result = walk(maze, start, seen, path);
+
+  /* console.log(path) // This will have the valid path */
+  return result;
 }
