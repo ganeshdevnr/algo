@@ -26,6 +26,12 @@ Run one problem test by name:
 npm run test:one two-crystal-balls
 ```
 
+For example, to run the maze solver exercise:
+
+```bash
+npm run test:one maze-solver
+```
+
 The problem name must match the folder name under `src/problems/`.
 
 ## Formatting
