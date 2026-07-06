@@ -7,27 +7,27 @@ function quickSortHelper(nums: number[], start: number, end: number): void {
 
   const partitionIndex = partition(nums, start, end);
 
-  quickSortHelper(nums, start, partitionIndex - 1);
+  quickSortHelper(nums, start, partitionIndex);
   quickSortHelper(nums, partitionIndex + 1, end);
 }
 
 // parition sorts the partition
 function partition(nums: number[], start: number, end: number): number {
-  let write = start;
-  let read = start;
+  let write = start - 1;
+  let read = start - 1;
+
+  const pivot = nums[end];
 
   for (; read <= end; read++) {
-    if (nums[read] < nums[end]) {
+    if (nums[read] < pivot) {
       const temp = nums[write];
       nums[write++] = nums[read];
       nums[read] = temp;
     }
   }
 
-  // swap the partition number
-  const temp = nums[write];
-  nums[write] = nums[end];
-  nums[end] = temp;
+  nums[end] = nums[write];
+  nums[write] = pivot;
 
   return write;
 }
