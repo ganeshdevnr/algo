@@ -10,8 +10,11 @@ export default function breadthFirstTraversal<T>(root: BinaryTreeNode<T> | null 
   const queue = [root];
   const values: T[] = [];
 
-  while (queue.length > 0) {
-    const current = queue.shift();
+  // using a readPointer prevents array shifting causes bad performance with large input
+  let readPointer = 0;
+
+  while (readPointer < queue.length) {
+    const current = queue[readPointer++];
 
     if (current) {
       values.push(current.value);
