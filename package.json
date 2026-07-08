@@ -7,7 +7,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
-    "test:one": "tsx scripts/test-one.ts"
+    "test:one": "tsx scripts/test-one.ts",
+    "problem": "tsx scripts/run-problem.ts"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
