@@ -14,6 +14,10 @@ describe("longest-unique-substring", () => {
     expect(longestUniqueSubstring("abcabcbb")).toBe(3);
   });
 
+  it("finds the longest unique substring at the start", () => {
+    expect(longestUniqueSubstring("aabaab!bb")).toBe(3);
+  });
+
   it("finds the longest unique substring in the middle", () => {
     expect(longestUniqueSubstring("pwwkew")).toBe(3);
   });
