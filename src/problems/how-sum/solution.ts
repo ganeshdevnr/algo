@@ -3,9 +3,9 @@ type Memo = {
 };
 
 export function howSum(target: number, nums: number[], memo: Memo = {}): number[] | null {
-  if (target in memo) return memo[target];
   if (target === 0) return [];
   if (target < 0) return null;
+  if (target in memo) return memo[target];
 
   for (const num of nums) {
     const newTarget = target - num;
